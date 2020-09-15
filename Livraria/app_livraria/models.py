@@ -1,6 +1,6 @@
 from django.db import models
 
-class Article(models.Model):
+class livro(models.Model):
     Autor = models.CharField(max_length = 50)
     Editora = models.CharField(max_length = 50)
     Paginas = models.IntegerField()
@@ -10,7 +10,7 @@ class Article(models.Model):
 
 
     def __str__(self):
-        return self.headline
+        return self.Autor
 
 
 # Create your models here.
