@@ -32,12 +32,12 @@ Listagem de Livros
       <td>{{ Livro.Email }}</td>
       <td>
         <a href ="{% url 'livro_edit' pk=Livro.pk %}">
-          <button>Editar</button>
+          <span class="glyphicon glyphicon-pencil"></span>
         </a>
       </td>
       <td>
         <a href ="{% url 'livro_remove' pk=Livro.pk %}">
-          <button>Remover</button>
+          <span class="glyphicon glyphicon-trash"></span>
         </a>
       </td>
     </tr>

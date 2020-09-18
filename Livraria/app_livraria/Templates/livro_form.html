@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load bootstrap3 %}
+
 {% block title %}
 Cadastro de livros
 {% endblock title %}
@@ -12,9 +14,9 @@ Cadastro de Livros
         <form method = "post">
             {% csrf_token %}
 
-            {{form.as_p }}
+           {% bootstrap_form form %}
 
-           <button type ="submit">
+           <button type ="submit" class="btn btn-primary">
                Salvar
            </button>
 
