@@ -16,8 +16,10 @@ Listagem de Livros
       <th>Autor</th>
       <th>Titulo</th>
       <th>Ano</th>
-      <th>Ação</th>
      <th>Editora</th>
+      <th>Email</th>
+      <th>Editar</th>
+      <th>Remover</th>
     </tr>
   </thead>
   <tbody>
@@ -26,12 +28,23 @@ Listagem de Livros
       <td>{{ Livro.Autor }}</td>
       <td>{{ Livro.Titulo }}</td>
       <td>{{ Livro.ano }}</td>
-      <td>{{Livro.Editora}}</td>
+      <td>{{ Livro.Editora }}</td>
+      <td>{{ Livro.Email }}</td>
+      <td>
+        <a href ="{% url 'livro_edit' pk=Livro.pk %}">
+          <button>Editar</button>
+        </a>
+      </td>
+      <td>
+        <a href ="{% url 'livro_remove' pk=Livro.pk %}">
+          <button>Remover</button>
+        </a>
+      </td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
-<a href="#">
+<a href="{% url 'livro_new' %}">
 <button type="submit" class="btn btn-primary">
     Cadastrar
 </button>
